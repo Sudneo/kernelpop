@@ -11,6 +11,8 @@ def main():
 		kernelpop(mode="brute-enumerate")
 	elif sys.argv[1] == "-e" and len(sys.argv) > 2:
 		kernelpop(mode="exploit", exploit=sys.argv[2])
+	elif sys.argv[1] == "-r" and len(sys.argv) > 2:
+		kernelpop(mode="brute-enumerate",report_file=sys.argv[2])
 	elif sys.argv[1] == "-i":
 		uname = input("Please enter uname: ")
 		if "darwin" in str(uname).lower():
