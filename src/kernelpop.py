@@ -456,7 +456,7 @@ def write_report_ordered_exploits(ordered_exploits,report_file, header, error_me
             report.write(medium_exploit.name+", MEDIUM,"+medium_exploit.brief_desc+"\n")
     if len(ordered_exploits[LOW_RELIABILITY]) > 0:
         for low_exploit in ordered_exploits[LOW_RELIABILITY]:
-            report.write(low_exploit.name+",LOW"+low_exploit.brief_desc+"\n")
+            report.write(low_exploit.name+",LOW,"+low_exploit.brief_desc+"\n")
     if len(ordered_exploits[HIGH_RELIABILITY]) == 0 and \
                     len(ordered_exploits[MEDIUM_RELIABILITY]) == 0 and \
                     len(ordered_exploits[LOW_RELIABILITY]) == 0:
